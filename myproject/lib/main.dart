@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myproject/Anasayfa.dart';
+import 'package:myproject/bilgilerimSayfasi.dart';
 import 'package:myproject/profile.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfileBilgilerim(),
+      home: Anasayfa(),
     );
   }
 }
