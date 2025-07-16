@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:myproject/bilgilerimSayfasi.dart';
+import 'package:myproject/Profil/bilgilerimSayfasi.dart';
+import 'package:myproject/Profil/izinlerim.dart';
+import 'package:myproject/Profil/odemearaclar%C4%B1m.dart';
+import 'package:myproject/Profil/sifremidegistir.dart';
+import 'package:myproject/Profil/songirisbilgilerim.dart';
 
 class ProfileBilgilerim extends StatefulWidget {
   const ProfileBilgilerim({super.key});
@@ -41,8 +45,12 @@ class _ProfileBilgilerimState extends State<ProfileBilgilerim> {
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.arrow_back, color: Colors.white),
+                    children:  [
+                      GestureDetector(
+                        onTap:(){
+                          Navigator.pop(context);
+                        }, child:Icon(Icons.arrow_back, color: Colors.white),
+                        ),
                       SizedBox(width: 16),
                       Text(
                         "Nergiz Alıcı",
@@ -110,6 +118,9 @@ class _ProfileBilgilerimState extends State<ProfileBilgilerim> {
             child: Container(
               color: Colors.white,
               child: ListTile(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Izinlerim()));
+                },
                 leading: Icon(Icons.phone_callback),
                 title: Text("İzinlerim", style: TextStyle(fontWeight: FontWeight.bold)),
                 trailing: Icon(Icons.arrow_forward_ios, size: 16),
@@ -121,6 +132,9 @@ class _ProfileBilgilerimState extends State<ProfileBilgilerim> {
             child: Container(
               color: Colors.white,
               child: ListTile(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Odemearaclarim()));
+                },
                 leading: Icon(Icons.credit_card),
                 title: Text("Kayıtlı Ödeme Araçlarım", style: TextStyle(fontWeight: FontWeight.bold)),
                 trailing: Icon(Icons.arrow_forward_ios, size: 16),
@@ -132,6 +146,9 @@ class _ProfileBilgilerimState extends State<ProfileBilgilerim> {
             child: Container(
               color: Colors.white,
               child: ListTile(
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>Sifremidegistir()));
+                },
                 leading: Icon(Icons.lock),
                 title: Text("Şifremi Değiştir", style: TextStyle(fontWeight: FontWeight.bold)),
                 trailing: Icon(Icons.arrow_forward_ios, size: 16),
@@ -143,6 +160,9 @@ class _ProfileBilgilerimState extends State<ProfileBilgilerim> {
             child: Container(
               color: Colors.white,
               child: ListTile(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Songirisbilgilerim()));
+                },
                 leading: Icon(Icons.access_time_filled),
                 title: Text("Son Giriş Bilgilerim", style: TextStyle(fontWeight: FontWeight.bold)),
                 trailing: Icon(Icons.arrow_forward_ios, size: 16),

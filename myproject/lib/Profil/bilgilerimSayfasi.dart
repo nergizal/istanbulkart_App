@@ -45,6 +45,7 @@ class Bilgilerimsayfasi extends StatelessWidget {
           ),
           Divider(height: 20,),
           Padding(
+            
             padding: const EdgeInsets.all(10.0),
             child: Text("İletişim Bilgileri",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey),
             ),
